@@ -1,0 +1,22 @@
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Explanation
+        repeat(auto-fill) tells the browser to repeat this rule for each
+        column. The second parameter minmax(250px, 1fr) says create a 
+        column that is at minimum 250px, and at maximum 1 fraction in size
+        It just means that it is equally sized
+     */
+     grid-gap: 0 10px;
+     /* How tall each of the rows will be */
+     grid-auto-rows: 10px; 
+     
+     /* This essentially means that each cell will span 3 rows.
+     Unfortunately, this is difficult to customize for each cell based 
+     on their unique length */
+     grid-row-end: span 3;
+}
+
+.image-list img {
+    width: 250px;
+}
